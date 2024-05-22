@@ -22,6 +22,12 @@ body {
     background-color: #1b1b1d;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 li {
     cursor: pointer;
     list-style-type: circle;
