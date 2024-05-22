@@ -1,140 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    color: #fff;
+    font-size: 62.5%;
 }
 
 body {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: pink;
+    align-self: center;
+    margin-top: 100px;
+    background-color: #1b1b1d;
 }
 
-header {
-    padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-header h1 {
-    font-size: 2.5rem;
+li {
+    cursor: pointer;
+    list-style-type: circle;
+    margin: 2rem 0;
+    text-transform: capitalize;
     font-weight: 500;
-    margin-bottom: 1rem;
+
+    &:hover {
+        color: #feac5e;
+    }
 }
 
-#newTaskForm {
-    display: flex;
+.mainTodoDiv {
+    width: 36rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    align-items: center;
 }
 
-input, button {
-    appearance: none;
+button {
+    height: 5rem;
+}
+
+h1 {
+    font-size: 3.6rem;
+    margin-top: 4.8rem;
+}
+
+hr {
+    margin-bottom: 3.2rem;
+}
+
+p,
+li,
+button {
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.6;
+
+}
+
+button {
+    background-color: #f5ee62;
+    padding: 0.6rem 2.4rem;
+    border-radius: 10rem;
+    margin-right: 3.6rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+        box-shadow: inset 0 0 0 0.2rem #f5ee62;
+        background-color: transparent;
+        color: #f5ee62;
+    }
+}
+
+input {
+    padding: 6px 2px;
+    min-width: 32rem;
+    font-size: 18px;
+    border-radius: 0.6rem;
     border: none;
-    outline: none;
-    background: none;
+    margin-right: 1.2rem;
 }
 
-#taskInput {
-    flex: 1 1 0%;
-    background-color: yellowgreen;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-}
-
-#taskInput::placeholder {
-    color: greenyellow;
-}
-
-#taskSubmit {
-    font-size: 1.25rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.4s;
-    background-color: paleturquoise;
-    width: 100px;
-    border-radius: 1rem;
-}
-
-#taskSubmit:hover {
-    opacity: 0.8;
-}
-
-#taskSubmit:active {
-    background-color: violet;
-}
-
-main {
-    flex: 1 1 0%;
-    padding: 2rem 1rem;
-    min-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.taskList {
-    padding: 1rem;
-}
-
-.taskList h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
-#myTasks .task {
-    display: flex;
-    justify-content: space-between;
-    background-color: lightseagreen;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-}
-
-#myTasks .task .content .text {
-    color: lightskyblue;
-    font-size: 1.125rem;
-    width: 100%;
-    display: block;
-    transition: 0.4s;
-}
-
-#myTasks .task .content .text:not(:read-only) {
-    color: purple;
-}
-
-#myTasks .task .actions {
-    display: flex;
-    margin: 0 --0.5rem;
-}
-
-.task .actions button {
-    cursor: pointer;
-    margin: 0 0.5rem;
-    font-size: 1.125rem;
-    padding: 0.5rem 0.7rem;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.task .actions button:hover {
-    opacity: 0.8;
-}
-
-.task .actions button:active {
-    background-color: violet;
-}
-
-.task .actions .edit {
-    background-color: paleturquoise;
-}
-
-.task .actions .delete {
-    background-color: crimson;
-    color: white;
+li:hover + .deleteBtn {
+    box-shadow: inset 0 0 0 0.2rem #f5ee62;
+    background-color: transparent;
+    color: #f5ee62;
 }
